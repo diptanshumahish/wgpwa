@@ -1,0 +1,413 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+html,
+body {
+  padding: 0;
+  margin: 0;
+  overflow-x: hidden;
+  font-family: 'Montserrat', sans-serif;
+}
+
+::-webkit-scrollbar {
+  display: none;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+* {
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+:root {
+  --themeColor: #220839;
+  --themeSec: #7d4aaa;
+  --col: #ffffff00;
+}
+
+#LoginPage {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+#maincont {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: left;
+}
+
+#head {
+  font-size: 3rem;
+  font-weight: bold;
+}
+
+#subt {
+  font-size: 2rem;
+  font-weight: 500;
+  text-align: left;
+  width: 100%;
+
+}
+
+main {
+  overflow-x: hidden;
+}
+
+.subs {
+  padding: 1rem;
+  padding-bottom: 0.2rem;
+  padding-left: 0;
+  text-align: left;
+  width: 100%;
+  font-size: 1rem;
+  font-weight: 500;
+}
+
+.inp {
+  width: 100%;
+  padding: 0.5rem;
+  border: none;
+  border-bottom: 2px solid var(--themeSec);
+}
+
+.inp::placeholder {
+  text-align: left;
+  width: 100%;
+
+}
+
+.inp:focus {
+  border-bottom: 2px solid var(--themeColor);
+  outline: none;
+}
+
+#forget,
+#back {
+  width: max-content;
+  text-align: right;
+  font-weight: 600;
+  color: var(--themeColor);
+  cursor: pointer;
+}
+
+#butt {
+  width: 100%;
+  background-color: var(--themeColor);
+  color: white;
+  padding: 1rem;
+  margin-top: 1rem;
+  border-radius: 0.5rem;
+  text-align: center;
+}
+
+#butt {
+  cursor: pointer;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+
+#error {
+  position: absolute;
+  background-color: red;
+  padding: 1rem;
+  transition: 400ms ease;
+  top: 5rem;
+  color: white;
+  border-radius: 0.2rem 0 0 0.2rem;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+
+#reset {
+  position: absolute;
+  background-color: green;
+  padding: 1rem;
+  transition: 400ms ease;
+
+  top: 5rem;
+  color: white;
+  border-radius: 0.2rem 0 0 0.2rem;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+
+#noemail {
+  position: absolute;
+  background-color: red;
+  padding: 1rem;
+  transition: 400ms ease;
+  top: 5rem;
+  color: white;
+  border-radius: 0.2rem 0 0 0.2rem;
+
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+
+/* form specific css  */
+#genback {
+  padding: 2rem;
+  font-size: 2rem;
+  font-weight: 600;
+  background-color: var(--themeSec);
+  color: white;
+}
+
+#mainFormArea {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+#form {
+  padding: 3rem;
+  display: flex;
+  flex-direction: column;
+  width: 60%;
+}
+
+.formEle {
+  font-size: 1.5rem;
+  font-weight: 600;
+  padding: 0.5rem 0;
+}
+
+.formInp {
+  padding: 0.7rem;
+  border-radius: 0.3rem;
+  border: none;
+  resize: none;
+  background-color: rgba(128, 128, 128, 0.155);
+}
+
+.formInp:focus {
+  outline: none;
+  background-color: #7d4aaa48;
+  box-shadow: rgba(100, 100, 111, 0.105) 0px 7px 29px 0px;
+}
+
+.formBut {
+  border: none;
+  margin-top: 1rem;
+  border-radius: 0.3rem;
+  padding: 0.8rem;
+  background-color: var(--themeSec);
+  color: white;
+  cursor: pointer;
+  font-size: 1.1rem;
+  box-shadow: rgba(100, 100, 111, 0.489) 0px 7px 29px 0px;
+
+}
+
+#helpp {
+  padding: 1rem 0;
+  font-size: 0.8rem;
+}
+
+
+/* error  */
+#mainContentCenter {
+  height: 100vh;
+  width: 100vw;
+  padding: 5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#innerError {
+  background-color: red;
+  padding: 1.5rem;
+  border-radius: 0.5rem;
+  color: white;
+  font-size: 2rem;
+  font-weight: 600;
+}
+
+#innerError span {
+  background-color: white;
+  color: red;
+  line-height: 2;
+  padding: 0 1rem;
+  border-radius: 0.1rem 0.2rem;
+  cursor: pointer;
+}
+
+/* leave page  */
+#leaveHead {
+  background-color: var(--themeSec);
+  padding: 3rem;
+  color: white;
+  font-size: 2rem;
+  font-weight: 700;
+}
+
+#leaveMain {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#leaveForm {
+  padding: 3rem;
+  min-width: 60%;
+}
+
+.leaveSub {
+  font-size: 1.5rem;
+  font-weight: 600;
+  padding: 0.5rem 0;
+}
+
+.inputLeave {
+  padding: 0.5rem;
+  border-radius: 0.2rem;
+  border: none;
+  width: 100%;
+  background-color: rgba(128, 128, 128, 0.193);
+}
+
+#nochange {
+  background-color: white;
+}
+
+#leaveSubmit {
+  margin-top: 1rem;
+  width: 100%;
+  background-color: var(--themeSec);
+  color: white;
+  border: none;
+  outline: none;
+  padding: 0.8rem;
+  border-radius: 0.2rem;
+  font-size: 1.1rem;
+  box-shadow: rgba(100, 100, 111, 0.489) 0px 7px 29px 0px;
+  cursor: pointer;
+}
+
+/* loading animation  */
+#loadingScreen {
+  width: 100vw;
+  height: 100vh;
+  z-index: 100;
+  background-color: #A65AB9;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#aniImage {
+  width: auto;
+}
+
+
+
+#dots {
+  position: absolute;
+  display: flex;
+  width: min-content;
+  opacity: 0.5;
+  gap: 20px;
+  top: 70%;
+  left: 50%;
+  transform: translateX(-50%);
+
+}
+
+.dot {
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  border: 1px solid #ffffffcb;
+  background-color: #ffffffcb;
+}
+
+.dot:nth-child(1) {
+  animation-name: dot1;
+  animation-duration: 3s;
+  animation-iteration-count: infinite;
+}
+
+@keyframes dot1 {
+  0% {
+    background-color: #ffffffcb;
+  }
+
+  25% {
+    background-color: transparent;
+  }
+
+  50% {
+    background-color: transparent;
+  }
+
+  75% {
+    background-color: transparent;
+  }
+
+  100% {
+    background-color: #ffffffcb;
+  }
+
+}
+
+.dot:nth-child(2) {
+  animation-name: dot2;
+  animation-duration: 3s;
+  animation-iteration-count: infinite;
+}
+
+@keyframes dot2 {
+  0% {
+    background-color: transparent;
+  }
+
+  25% {
+    background-color: #ffffffcb;
+  }
+
+  50% {
+    background-color: transparent;
+  }
+
+  75% {
+    background-color: #ffffffcb;
+  }
+
+  100% {
+    background-color: transparent;
+  }
+}
+
+.dot:nth-child(3) {
+  animation-name: dot3;
+  animation-duration: 3s;
+  animation-iteration-count: infinite;
+}
+
+@keyframes dot3 {
+  0% {
+    background-color: transparent;
+  }
+
+  25% {
+    background-color: transparent;
+  }
+
+  50% {
+    background-color: #ffffffcb;
+  }
+
+  75% {
+    background-color: transparent;
+  }
+
+  100% {
+    background-color: transparent;
+  }
+}
